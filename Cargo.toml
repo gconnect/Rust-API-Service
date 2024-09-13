@@ -1,0 +1,29 @@
+[package]
+name = "rust_greetings_api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.5"
+axum-extra = { version="0.9.3", features = ["cookie"]}
+bcrypt = "0.15.1"
+chrono ={ version = "0.4.38", features = ["serde"]}
+dotenv = "0.15.0"
+jsonwebtoken = { version = "9.3.0" }
+run = "0.1.0"
+serde = {version = "1.0.210", features=["derive"]}
+serde_json = "1.0.128"
+sqlx = { version ="0.8.2", features = ["runtime-tokio", "tls-native-tls", "uuid", "postgres", "macros"]}
+tokio = { version = "1.40.0", features = ["full", "rt-multi-thread"] }
+tower = "0.5.0"
+tower-http = "0.5.2"
+utoipa = {version ="4.2.3", features=["axum_extras", "openapi_extensions"]}
+utoipa-rapidoc = "4.0.0"
+utoipa-redoc = "4.0.0"
+utoipa-scalar = "0.1.0"
+utoipa-swagger-ui = {version= "7.1.0", features = ["axum"]}
+uuid = {version = "1.10.0", features = [ "v4", "v7","js", "serde"]}
+
+
